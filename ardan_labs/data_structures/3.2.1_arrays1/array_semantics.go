@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+func main() {
+  // Declare an array of five strings initialized to
+  // the zero value.
+  var fruits [5]string
+  fruits[0] = "Apple"
+  fruits[1] = "Orange"
+  fruits[2] = "Banana"
+  fruits[3] = "Grape"
+  fruits[4] = "Plum"
+
+  // Iterate over the array of strings.
+  for i, fruit := range fruits {
+    fmt.Println(i, fruit)
+  }
+
+  // Declare an array of 4 integers initialized with some values.
+  numbers := [4]int{10, 20, 30, 40}
+
+  // Iterate over the array of numbers.
+  for i := 0; i < len(numbers); i++ {
+    fmt.Println(i, numbers[i])
+  }
+}
