@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-  // Declare a nil slice of strings.
-  var data []string
+  // Declare a nil slice of strings. This means there is no backing array
+  var data []string // The slice pointer points to the empty struct: var es struct{}
 
   // Get the capacity of the slice.
   lastCap := cap(data)
