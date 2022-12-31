@@ -5,6 +5,7 @@ import "fmt"
 func main() {
   // Declare a nil slice of strings. This means there is no backing array
   var data []string // The slice pointer points to the empty struct: var es struct{}
+  // data := make([]string, 0, 1e5), because we know how much capacity we need we initialize the backing array at the start
 
   // Get the capacity of the slice.
   lastCap := cap(data)
