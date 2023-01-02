@@ -21,12 +21,12 @@ func main() {
   // Create a value of type User and send a notification.
   u := user{name: "Bill", email: "bill@email.com"}
   fmt.Println(u)
-  // Values of type user do not implement do not implement the interface because
+  // Values of type user do not implement the interface because
   // pointer receivers don't belong to the method set of a value.
 
   // sendNotification(u)
-  // cannot use u (type user) as type notifier in argument to sendNotification:
-  // user does not implement notifier (notify method has pointer receiver)
+  /* cannot use u (type user) as type notifier in argument to sendNotification:
+  user does not implement notifier (notify method has pointer receiver) */
 }
 
 func sendNotification(n notifier) {
