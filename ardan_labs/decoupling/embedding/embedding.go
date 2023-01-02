@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+// notifier is an interface that defines notification type behavior.
+type notifier interface {
+  notify()
+}
+
 // user defines a user in the program
 type user struct {
   name string
@@ -30,7 +35,13 @@ func main() {
   }
 
   // We can access the inner type's method directly.
-  ad.user.notify()
+  // ad.user.notify()
   // The inner type's method is promoted.
-  ad.notify()
+  // ad.notify()
+
+  sendNotification(&ad)
+}
+
+func sendNotification(n notifier) {
+  n.notify()
 }
